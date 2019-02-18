@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">DashBoard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard/alarms">Alarms</a>
+      </li>
+
+    </ul>
+    <span class="navbar-text" (click)="logout()">
+      Logout
+    </span>
+  </div>
+</nav>
+<div class="h3 text-center my-3">
+  Alarms
+</div>
+<div class="container">
+  <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead *ngIf="alarms.length">
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Created At</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of alarms">
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.value}}</td>
+        <td>{{item.time }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

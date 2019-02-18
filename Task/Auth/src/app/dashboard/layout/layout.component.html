@@ -1,0 +1,28 @@
+<!-- <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Dashboard Layout</a>
+  <a class="navbar-brand" href="#">Alarm</a>
+ 
+</nav> -->
+
+<!-- <div [chart]="chart" *ngIf="!hidden"></div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">DashBoard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard/alarms">Alarms</a>
+      </li>
+
+    </ul>
+    <span class="navbar-text" (click)="logout()">
+      Logout
+    </span>
+  </div>
+</nav>
+<h1 class="text-center">Graphs</h1>
+<div class="container">
+  <div [chart]="cpu" *ngIf="!hidden"></div>
+  <div [chart]="ram" *ngIf="!hidden"></div>
+</div>
